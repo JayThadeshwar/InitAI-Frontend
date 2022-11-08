@@ -9,7 +9,7 @@ const LiveWave = (props) => {
         <div className="wave"></div>
         <div className="wave"></div>
       </div>
-      <p className={`text-white z-10 text-5xl font-bold ${props.position} absolute overflow-y-hidden top-24`}> {props.title} </p>
+      <p className={`text-white z-10 text-5xl font-bold ${props.position} absolute top-24`}> {props.title} </p>
       <div className="ocean2 overflow-x-hidden" style={{ transform: "rotate(180deg)" }}>
         <div className="wave"></div>
         <div className="wave"></div>
