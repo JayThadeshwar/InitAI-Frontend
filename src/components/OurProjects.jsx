@@ -1,12 +1,12 @@
 import React from 'react'
-import rect from "../Images/Rectangle 25.png"
-import vector from "../Images/Vector.svg"
+import rect from "../assets/Rectangle 25.png"
+import vector from "../assets/Arrow.svg"
 
 const OurProjects = () => {
     return (
 
-        <div className='bg-gradient-to-b from-blue-100 to-blue-100'>
-            <span className='text-[#C71A03] text-[40px] font-["Montserrat"] font-bold'>Our Projects</span>
+        <div className='bg-gradient-to-b from-[#cee3fc] to-[#edf5fe]'>
+            <p className='text-[#C71A03] text-[40px] font-["Montserrat"] font-bold text-center'>Our Projects</p>
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 lg:gap-3 justify-items-center mt-10'>
                 <div className="py-10 w-72 ">
@@ -93,7 +93,7 @@ const OurProjects = () => {
             </div>
 
             <div className='mt-5 pb-5'>
-                <p className='text-[24px] text-[#7C7C7C] '>
+                <p className='text-[24px] text-[#7C7C7C] text-center '>
                     Authoritatively underwhelm excellent methodologies via premium expertise competitive<br /> than open-source imperatives disseminate.
                 </p>
             </div>

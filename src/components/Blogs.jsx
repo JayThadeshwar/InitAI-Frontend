@@ -1,13 +1,14 @@
 import React from 'react'
-import rect from "../Images/Rectangle_blogs_bigger.svg"
-import Waves from './Waves'
+import rect from "../assets/Rectangle_blogs_bigger.svg"
+import LiveWave from './LiveWave'
 
 
 
 const Blogs = () => {
     return (
-        <div className="bg-gradient-to-b from-blue-100 to-blue-100 ">
-            <span className='text-[#C71A03] text-[40px] font-[" Montserrat"] font-bold '><Waves position={"left-12"} title={"Blogs"} /></span>
+        <div className="bg-gradient-to-b from-[#cee3fc] to-[#edf5fe] ">
+            <span className='text-[#C71A03] text-[40px] font-[" Montserrat"] font-bold '>
+                <LiveWave position={"left-12"} title={"Blogs"} /></span>
             <div className='grid grid-cols-1 px-4 lg:grid-cols-1 xl:grid-cols-3 justify-items-center mt-10 ml-1 mr-1 '>
                 <div className="py-10 w-88 ">
                     <div className="rounded-lg overflow-hidden shadow-lg  max-w-sm  ">
