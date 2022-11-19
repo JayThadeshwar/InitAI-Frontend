@@ -1,5 +1,5 @@
 import React from 'react'
-import weAreINIT from '../assets/weAreINIT.svg'
+import weAreINIT from '../assets/weAreInit.svg'
 
 const Content = () => {
   return (
