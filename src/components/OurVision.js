@@ -3,7 +3,7 @@ import vision from '../assets/vision.svg'
 
 const OurVision = () => {
   return (
-    <div className='bg-blue-100 overflow-hidden'>
+    <div className='overflow-hidden'>
       <div className="row grid grid-cols-10">
         <div className="lg:col-span-7 lg:px-16 lg:mt-20 mt-8 col-span-10">
             <p className='text-[#C71A03] text-[40px] font-bold lg:text-left text-center'>Our Vision</p>
