@@ -3,7 +3,7 @@ import mission from '../assets/mission.svg'
 
 const OurMission = () => {
   return (
-    <div className='bg-blue-100 overflow-hidden'>
+    <div className='overflow-hidden'>
       <div className="row grid grid-cols-10">
         <div className="lg:col-span-3 lg:ml-12 lg:visible invisible">
             <img src={mission} alt="" />
