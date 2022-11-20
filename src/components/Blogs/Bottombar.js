@@ -16,11 +16,11 @@ const Bottombar = () => {
 			</a>
 			<a href="/" class="w-full focus:text-teal-500 hover:rounded-full hover:bg-gray-200 justify-center inline-block text-center pt-2 pb-1">
                 <ion-icon name="add-circle-outline" size="large"></ion-icon>
-				<span class="tab tab-explore block text-xs">Add</span>
+				<span class="tab tab-explore block text-xs">Create</span>
 			</a>
 			<a href="/" class="w-full focus:text-teal-500 hover:rounded-full hover:bg-gray-200 justify-center inline-block text-center pt-2 pb-1">
                 <ion-icon name="document-outline" size="large"></ion-icon>
-				<span class="tab tab-whishlist block text-xs">Whishlist</span>
+				<span class="tab tab-whishlist block text-xs">Edit</span>
 			</a>
 		</div>
 	</section>
