@@ -1,48 +1,46 @@
-import React, { useState } from 'react'
-import logo from '../assets/Logo.svg'
+import React, { useState, useEffect } from 'react'
+import logo from '../assets/LOGO.svg'
 
 const Navbar = () => {
 
-  let Links=[
-    {name:"Projects",link:"/"},
-    {name:"Events",link:"/"},
-    {name:"Our Team",link:"/"},
-    {name:"Beginner's Guide",link:"/"},
-    {name:"About Us",link:"/"},
-    {name:"Alumini",link:"/"}
-  ];
-
-  let [open, setOpen]=useState(false);
-
+  let [open, setOpen]=useState(true);
 
   return (
-    
-    <nav class="flex items-center justify-between flex-wrap bg-white mx-auto border-black border-b-[1.5px] shadow overflow-hidden">
-      <div class="flex items-center cursor-pointer flex-shrink-0 px-6 md:px-10">
-        <img src={logo} alt=""></img>
-        <div onClick={()=>setOpen(!open)} class="text-3xl cursor-pointer lg:hidden right-8 absolute">
-          {/* <ion-icon name="menu" onclick={Menu(this)}></ion-icon> */}
+    <nav className="flex items-center justify-between flex-wrap bg-white border-b-[1.5px] border-black p-2 text-[16px]">
+      <a href="/" className="mr-4 inline-flex items-center">
+        <img src={logo}></img>
+      </a>
+      <div className="block lg:hidden">
+        <button className="flex items-center px-3 py-2 border rounded border-black text-white bg-[#4051A3] hover:text-black hover:bg-white" onClick={()=>setOpen(!open)}>
           <ion-icon name={open ? "close" : "menu"}></ion-icon>
-        </div>
+        </button>
       </div>
-      
-      {/* <div id="list" class="w-full block flex-grow lg:flex lg:ml-20 relative lg:w-auto"> */}
-        <ul className={`lg:ml-8 lg:flex md:flex md:items-center md:pb-0 pb-8 flex-grow font-bold z-[-1] md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 lg:opacity-100 top-[-400px] transition-all ease-in duration-500 ${open ? 'top-20' : 'top-[-490px] hidden'} lg:inline-block hidden`}>
-          {
-            Links.map((Link)=>(
-              <li key={Link.name} class="md:ml-8 text-sm md:my-0 my-7">
-
-                <a href={Link.link} class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-teal-500 duration-500 lg:mr-10">{Link.name}</a>
-
-              </li>
-            ))
-          }
-          <li>
-            <a href="#" class="inline-block lg:ml-24 ml-32 text-sm px-12 py-4 leading-none bg-[#4051A3] border rounded-xl text-white border-black lg:mt-0 duration-500 hover:text-teal-500">Sign In</a>
-          </li>
-        </ul>
-      <hr/>
-    </nav> 
+      <div className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto ${open ? '' : 'hidden'}`}>
+        <div className="text-sm lg:flex-grow mt-4 lg:text-center font-[Montserrat] font-extrabold">
+          <a href="#responsive-header" className="block lg:inline-block lg:mt-0 text-black hover:bg-gray-200 p-2 hover:rounded-full mr-4 lg:mr-8">
+            <span>Projects</span>
+          </a>
+          <a href="#responsive-header" className="block lg:inline-block lg:mt-0 text-black hover:bg-gray-200 p-2 hover:rounded-full mr-4 lg:mr-8">
+            <span>Events</span>
+          </a>
+          <a href="#responsive-header" className="block lg:inline-block lg:mt-0 text-black hover:bg-gray-200 p-2 hover:rounded-full mr-4 lg:mr-8">
+            <span>Our Team</span>
+          </a>
+          <a href="#responsive-header" className="block lg:inline-block lg:mt-0 text-black hover:bg-gray-200 p-2 hover:rounded-full mr-4 lg:mr-8">
+            <span>Beginner's Guide</span>
+          </a>
+          <a href="#responsive-header" className="block lg:inline-block lg:mt-0 text-black hover:bg-gray-200 p-2 hover:rounded-full mr-4 lg:mr-8">
+            <span>About Us</span>
+          </a>
+          <a href="#responsive-header" className="block lg:inline-block lg:mt-0 text-black hover:bg-gray-200 p-2 hover:rounded-full mr-4 lg:mr-8">
+            <span>Alumini</span>
+          </a>
+        </div>
+        <div>
+          <a href="#" className="inline-block text-sm py-4 px-12 leading-none border rounded-xl text-white bg-[#4051A3] border-black hover:bg-white hover:text-black mt-4 lg:mt-0 font-[Ubuntu] font-light">Sign In</a>
+        </div>
+        </div>
+    </nav>
   ) 
   
 }

@@ -5,6 +5,8 @@ import Roadmap from './components/Roadmap';
 import Landing from './components/Landing';
 import OurProjects from './components/OurProjects';
 import Blogs from "./components/Blogs";
+import Searchbar from './components/Blogs/Searchbar';
+import Blogpage from './components/Blogs/Blogpage';
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
       <Roadmap/>
       <Contact/>
       <Footer/>
+      <Blogpage/>
     </div>
   );
 }

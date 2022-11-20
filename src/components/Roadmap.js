@@ -1,5 +1,4 @@
 import React from "react";
-import roadmap from "../assets/Roadmap.svg";
 import circle from "../assets/Circle.svg";
 import greenline from "../assets/greenLine.svg";
 import short_horizontal from "../assets/short_horizontal.svg";
@@ -38,19 +37,19 @@ const Roadmap = () => {
               porro, dignissimos libero nulla?
             </p>
             </div>
-            
-            <div className="lg:grid lg:grid-cols-3 hidden mt-8">
-              <div className="col-span-2"></div>
-              <div className="col-span-1 flex">
-                <img src={short_horizontal} className="mt-2 object-right" alt="" />
-                <img className="absolute" src={small_circle} alt="" />
-                <img className="absolute ml-28" src={small_circle} alt="" />
-                <img className="absolute ml-52" src={small_circle} alt="" />
-              </div>
+            <div className="flex w-[80%] justify-end pl-auto mt-8">
+            <div className="justify-end px-auto align-bottom relative border-2 border-black" >
             </div>
-            {/* <div className="grid grid-cols-3 mt-16">
-              <div className="col-span-1"></div>
-            </div> */}
+            <div className="flex">
+              <img className="" src={small_circle} alt="" />
+              <img className="" src={small_circle} alt="" />
+              </div>
+            
+            {/* </img> */}
+              
+              
+              
+            </div>
           </div>
         </div>
       </div>
@@ -89,8 +88,8 @@ const Roadmap = () => {
             <img src={long_horizontal} className="mt-2 ml-[210px]" alt="" />
             <img className="absolute ml-48" src={small_circle} alt="" />
             <img className="absolute ml-80" src={small_circle} alt="" />
-            <img className="absolute ml-[462px]" src={small_circle} alt="" />
-            <img className="absolute ml-[590px]" src={small_circle} alt="" />
+            <img className="absolute ml-[420px]" src={small_circle} alt="" />
+            <img className="xl:absolute hidden ml-48 xl:ml-[590px]" src={small_circle} alt="" />
           </div>
         </div>
       </div>
@@ -134,12 +133,9 @@ const Roadmap = () => {
                 <img src={short_horizontal} className="mt-2 object-right" alt="" />
                 <img className="absolute" src={small_circle} alt="" />
                 <img className="absolute ml-28" src={small_circle} alt="" />
-                <img className="absolute ml-52" src={small_circle} alt="" />
+                <img className="xl:absolute hidden ml-48" src={small_circle} alt="" />
               </div>
             </div>
-            {/* <div className="grid grid-cols-3 mt-16">
-              <div className="col-span-1"></div>
-            </div> */}
           </div>
         </div>
       </div>
@@ -171,8 +167,8 @@ const Roadmap = () => {
             <img src={long_horizontal} className="mt-2 ml-[210px]" alt="" />
             <img className="absolute ml-48" src={small_circle} alt="" />
             <img className="absolute ml-80" src={small_circle} alt="" />
-            <img className="absolute ml-[462px]" src={small_circle} alt="" />
-            <img className="absolute ml-[590px]" src={small_circle} alt="" />
+            <img className="absolute ml-[400px]" src={small_circle} alt="" />
+            <img className="xl:absolute hidden ml-48 xl:ml-[590px]" src={small_circle} alt="" />
           </div>
         </div>
       </div>
@@ -182,3 +178,22 @@ const Roadmap = () => {
 };
 
 export default Roadmap;
+
+// <div className="lg:grid lg:grid-cols-3 hidden mt-8">
+//               <div className="col-span-2"></div>
+//               <div className="col-span-1 flex">
+//                 <img src={short_horizontal} className="mt-2 object-right" alt="" />
+//                 <img className="absolute" src={small_circle} alt="" />
+//                 <img className="absolute ml-28" src={small_circle} alt="" />
+//                 <img className="xl:absolute hidden ml-48" src={small_circle} alt="" />
+//               </div>
+//             </div>
+
+
+{/* <div className="flex w-fit justify-end pl-auto mt-8">
+            <img className="justify-end px-auto align-bottom relative" src={short_horizontal} alt="" />
+            <div className="flex absolute justify-items-start">
+              <img className="" src={small_circle} alt="" />
+              <img className="" src={small_circle} alt="" />
+              </div>
+ */}
