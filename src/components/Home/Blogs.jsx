@@ -1,5 +1,5 @@
 import React from 'react'
-import rect from "../assets/Rectangle_blogs_bigger.svg"
+import rect from "../../assets/Rectangle_blogs_bigger.svg"
 import LiveWave from './LiveWave'
 
 

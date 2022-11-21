@@ -1,10 +1,9 @@
 import React from 'react'
-import bg from '../assets/Pradhyuman 1.svg'
-import mark from '../assets/LocationMark.svg'
-import vector from '../assets/Vector.svg'
-import linkedin from '../assets/LinkedIn.svg'
-import insta from '../assets/Insta.svg'
-import globe from '../assets/Globe.svg'
+import mark from '../../assets/LocationMark.svg'
+import vector from '../../assets/Vector.svg'
+import linkedin from '../../assets/LinkedIn.svg'
+import insta from '../../assets/Insta.svg'
+import globe from '../../assets/Globe.svg'
 import LiveWave from './LiveWave'
 
 const Contact = () => {

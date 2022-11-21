@@ -1,5 +1,5 @@
 import React from 'react'
-import mission from '../assets/mission.svg'
+import mission from '../../assets/mission.svg'
 
 const OurMission = () => {
   return (

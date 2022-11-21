@@ -1,5 +1,5 @@
 import React from 'react'
-import vision from '../assets/vision.svg'
+import vision from '../../assets/vision.svg'
 
 const OurVision = () => {
   return (

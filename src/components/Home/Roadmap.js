@@ -1,9 +1,9 @@
 import React from "react";
-import circle from "../assets/Circle.svg";
-import greenline from "../assets/greenLine.svg";
-import short_horizontal from "../assets/short_horizontal.svg";
-import small_circle from "../assets/small_circle.svg";
-import long_horizontal from "../assets/long_horizontal.svg";
+import circle from "../../assets/Circle.svg";
+import greenline from "../../assets/greenLine.svg";
+import short_horizontal from "../../assets/short_horizontal.svg";
+import small_circle from "../../assets/small_circle.svg";
+import long_horizontal from "../../assets/long_horizontal.svg";
 import LiveWave from "./LiveWave";
 
 const Roadmap = () => {
@@ -37,18 +37,14 @@ const Roadmap = () => {
               porro, dignissimos libero nulla?
             </p>
             </div>
-            <div className="flex w-[80%] justify-end pl-auto mt-8">
-            <div className="justify-end px-auto align-bottom relative border-2 border-black" >
-            </div>
-            <div className="flex">
-              <img className="" src={small_circle} alt="" />
-              <img className="" src={small_circle} alt="" />
+            <div className="lg:grid lg:grid-cols-3 hidden mt-8">
+              <div className="col-span-2"></div>
+              <div className="col-span-1 flex">
+                <img src={short_horizontal} className="mt-2 object-right" alt="" />
+                <img className="absolute" src={small_circle} alt="" />
+                <img className="absolute ml-28" src={small_circle} alt="" />
+                <img className="xl:absolute hidden ml-48" src={small_circle} alt="" />
               </div>
-            
-            {/* </img> */}
-              
-              
-              
             </div>
           </div>
         </div>
@@ -178,17 +174,19 @@ const Roadmap = () => {
 };
 
 export default Roadmap;
-
-// <div className="lg:grid lg:grid-cols-3 hidden mt-8">
-//               <div className="col-span-2"></div>
-//               <div className="col-span-1 flex">
-//                 <img src={short_horizontal} className="mt-2 object-right" alt="" />
-//                 <img className="absolute" src={small_circle} alt="" />
-//                 <img className="absolute ml-28" src={small_circle} alt="" />
-//                 <img className="xl:absolute hidden ml-48" src={small_circle} alt="" />
-//               </div>
-//             </div>
-
+{/* <div className="flex w-[80%] justify-end pl-auto mt-8">
+            <div className="justify-end px-auto align-bottom relative border-2 border-black" >
+            </div>
+            <div className="flex">
+              <img className="" src={small_circle} alt="" />
+              <img className="" src={small_circle} alt="" />
+              </div>
+            
+             </img> 
+              
+              
+              
+            </div> */}
 
 {/* <div className="flex w-fit justify-end pl-auto mt-8">
             <img className="justify-end px-auto align-bottom relative" src={short_horizontal} alt="" />
