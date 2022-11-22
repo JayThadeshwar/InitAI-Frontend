@@ -4,9 +4,10 @@ import logo from '../assets/Logo.svg'
 const Navbar = () => {
 
   let [open, setOpen]=useState(true);
+  let [open1, setOpen1]=useState(false);
 
   return (
-    <nav className="flex items-center justify-between flex-wrap bg-white border-b-[1.5px] border-black p-2 text-[16px]">
+    <nav id="full" className="flex items-center justify-between flex-wrap bg-white border-b-[1.5px] border-black p-2 text-[16px]">
       <a href="/" className="mr-4 inline-flex items-center">
         <img src={logo}></img>
       </a>
@@ -20,8 +21,14 @@ const Navbar = () => {
           <a href="#responsive-header" className="block lg:inline-block lg:mt-0 text-black hover:bg-gray-200 p-2 hover:rounded-full mr-4 lg:mr-8">
             <span>Projects</span>
           </a>
-          <a href="#responsive-header" className="block lg:inline-block lg:mt-0 text-black hover:bg-gray-200 p-2 hover:rounded-full mr-4 lg:mr-8">
+          <a href="#responsive-header" id="dropdown" className="relative block lg:inline-block lg:mt-0 text-black hover:bg-gray-200 p-2 hover:rounded-full mr-4 lg:mr-8" onClick={()=>setOpen1(!open1)}>
             <span>Events</span>
+            <div class={`absolute right-0 z-10 mt-2 w-32 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none ${open1 ? 'block' : 'hidden'}`} role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+              <div class="py-1" role="none">
+                <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200 p-2 hover:rounded-full" role="menuitem" tabindex="-1" id="menu-item-0">Events</a>
+                <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200 p-2 hover:rounded-full" role="menuitem" tabindex="-1" id="menu-item-1">Blogs</a>
+              </div>
+            </div>
           </a>
           <a href="#responsive-header" className="block lg:inline-block lg:mt-0 text-black hover:bg-gray-200 p-2 hover:rounded-full mr-4 lg:mr-8">
             <span>Our Team</span>
