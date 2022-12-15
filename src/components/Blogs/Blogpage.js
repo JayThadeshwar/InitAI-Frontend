@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from '../Navbar'
 import Bottombar from './Bottombar'
 import Maincontent from './Maincontent'
 import Rightsection from './Rightsection'
@@ -8,16 +7,15 @@ import Sidebar from './Sidebar'
 const Blogpage = () => {
   return (
     <div>
-      <Navbar/>
-      <div className="grid grid-cols-12">
-        <div className="bg-blue-100 col-span-1 hidden lg:block">
+      <div className="grid lg:grid-cols-12 grid-cols-1">
+        <div className="bg-white lg:col-span-1 hidden lg:block">
           <Sidebar />
         </div>
-        <div className="bg-blue-200 col-span-8">
+        <div className="bg-white lg:col-span-8 col-span-1 px-2 lg:px-28">
           <Maincontent/>
         </div>
-        <div className="bg-gradient-to-b from-[#FFFFFF] to-[#CCE2FC] col-span-3">
-            <Rightsection/>
+        <div className="bg-gradient-to-b from-[#FFFFFF] to-[#CCE2FC] hidden lg:block col-span-3">
+          <Rightsection/>
         </div>
         <div className='lg:hidden'>
           <Bottombar/>

@@ -1,6 +1,6 @@
 import React from 'react'
-import rect from "../assets/Rectangle 25.png"
-import vector from "../assets/Arrow.svg"
+import rect from "../../assets/Rectangle 25.svg"
+import vector from "../../assets/Arrow.svg"
 
 const OurProjects = () => {
     return (
