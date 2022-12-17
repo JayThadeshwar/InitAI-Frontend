@@ -1,8 +1,9 @@
 import React from 'react'
 import Bottombar from './Bottombar'
-import Rightsection from './Rightsection'
+import RightSection2 from './RightSection2'
 import Sidebar from './Sidebar'
 import Ellipse from "../../assets/Ellipse 412.svg"
+import Ellipse2 from "../../assets/Ellipse 413.svg"
 import Rectangle from "../../assets/Rectangle 400.svg"
 
 const  SingleBlog = () => {
@@ -21,12 +22,15 @@ const  SingleBlog = () => {
           <span className="pl-2">
             <img src={Ellipse} alt="" srcset="" />
           </span>
-          <div className="px-5 pb-2 text-lg font-bold block">
-            Author_name
+          <div className="px-5 pb-2  block">
+            <div className='text-lg font-bold'>Author_name</div>
+            <ul>
+              <li className='text-[12px] inline-flex'>5th November
+                  <div className='inline mt-2 mx-[26px]'><img src={Ellipse2} alt="" srcset="" /></div>
+                  14 min read
+              </li>
+            </ul>
           </div>
-          <p className="">
-            5th November
-          </p>
         </div>
         <p className="font-bold text-[28px] py-2 mt-4">
           Activation Function in Neural Networks
@@ -36,9 +40,9 @@ const  SingleBlog = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-10 my-4">
           <div className="col-span-10 text-[14px]">
-            THE ARTICLE: lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum lorem ipsum lorem ips lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum lorem ipsum lorem ips lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum lorem ipsum lorem ips.
+            <p>THE ARTICLE: lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum lorem ipsum lorem ips lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum lorem ipsum lorem ips lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum lorem ipsum lorem ips.</p>
 
-            lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum lorem ipsum lorem ips lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum lorem ipsum lorem ips lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum lorem ipsum lorem ips lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum  lorem ipsum  lorem  ipsum lorem ipsumlorem ipsum lorem lorem.
+            <p>lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum lorem ipsum lorem ips lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum lorem ipsum lorem ips lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum lorem ipsum lorem ips lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum  lorem ipsum  lorem  ipsum lorem ipsumlorem ipsum lorem lorem.</p>
           </div>
         </div>
 
@@ -48,8 +52,8 @@ const  SingleBlog = () => {
 
     </div>
         </div>
-        <div className="bg-gradient-to-b from-[#FFFFFF] to-[#CCE2FC] hidden lg:block col-span-3">
-          <Rightsection/>
+        <div className="bg-white hidden lg:block col-span-3">
+          <RightSection2 />
         </div>
         <div className='lg:hidden'>
           <Bottombar/>
