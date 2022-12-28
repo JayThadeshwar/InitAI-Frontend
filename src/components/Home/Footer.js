@@ -1,10 +1,10 @@
 import React from 'react'
-import logo from '../assets/InitLogo.svg'
-import whitelinkedin from '../assets/LinkedInWhite.svg'
-import whiteinsta from '../assets/InstaWhite.svg'
-import whiteglobe from '../assets/GlobeWhite.svg'
-import sublist from '../assets/sublist.svg'
-import line from '../assets/Line.svg'
+import logo from '../../assets/InitLogo.svg'
+import whitelinkedin from '../../assets/LinkedInWhite.svg'
+import whiteinsta from '../../assets/InstaWhite.svg'
+import whiteglobe from '../../assets/GlobeWhite.svg'
+import sublist from '../../assets/sublist.svg'
+import line from '../../assets/Line.svg'
 
 const Footer = () => {
   return (
