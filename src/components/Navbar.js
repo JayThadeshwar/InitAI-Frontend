@@ -20,7 +20,7 @@ const Navbar = () => {
       </div>
       <div className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto ${open ? '' : 'hidden'}`}>
         <div className="text-sm lg:flex-grow mt-4 lg:text-center font-[Montserrat] font-extrabold">
-          <Link to="/" className="block lg:inline-block text-base lg:mt-0 text-black hover:bg-gray-200 p-2 hover:rounded-full mr-4 lg:mr-8">
+          <Link to="/projects" className="block lg:inline-block text-base lg:mt-0 text-black hover:bg-gray-200 p-2 hover:rounded-full mr-4 lg:mr-8">
             <span>Projects</span>
           </Link>
           <Link to="/" id="dropdown" className="relative block lg:inline-block text-base lg:mt-0 text-black hover:bg-gray-200 p-2 hover:rounded-full mr-4 lg:mr-8" onClick={()=>setOpen1(!open1)}>
@@ -35,7 +35,7 @@ const Navbar = () => {
               </div>
             </div>
           </Link>
-          <Link to = "/" className="block lg:inline-block text-base lg:mt-0 text-black hover:bg-gray-200 p-2 hover:rounded-full mr-4 lg:mr-8">
+          <Link to = "/team" className="block lg:inline-block text-base lg:mt-0 text-black hover:bg-gray-200 p-2 hover:rounded-full mr-4 lg:mr-8">
             <span>Our Team</span>
           </Link>
           <Link to = "/" className="block lg:inline-block text-base lg:mt-0 text-black hover:bg-gray-200 p-2 hover:rounded-full mr-4 lg:mr-8">
