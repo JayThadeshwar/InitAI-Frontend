@@ -13,9 +13,9 @@ function App() {
     <Navbar/>
       <Routes>
         <Route path="/" element={ <Landing /> } />
-        <Route path="/events/blogs" element={ <Blogpage /> } />
+        <Route path="/events/blogs/all" element={ <Blogpage /> } />
         <Route path="/projects" element={ <ProjectsPage /> } />
-        <Route path="singleblog" element={ <SingleBlog /> } />
+        <Route path={`/events/blogs/:id`} element={ <SingleBlog /> } />
     </Routes>
     </div>
     </>

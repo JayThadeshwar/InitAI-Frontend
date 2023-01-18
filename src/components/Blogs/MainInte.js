@@ -5,21 +5,26 @@ import Profile from "../../assets/Author_img.svg";
 import Bookmark from "../../assets/Bookmark.svg";
 import Round from "../../assets/Round.svg";
 import Dots from "../../assets/Three_dots.svg";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate , useParams } from 'react-router-dom';
 
 const MainInte = () => {
   const [myData, setMyData] = useState([]);
   const [isError, setIsError] = useState({});
-  const navigate = useNavigate() ;
+  const navigate = useNavigate();
+  // const { id,authors, title, content, mainImage, domains,dateOfPublish, readTime } = post; 
+  // const { id } = useParams();
+  // const { id } = context;
 
-  const handleClick = () => {
-    navigate("/singleblog");
-  }
+  // const handleClick = () => {
+  //   // navigate(`/${blog?.id}`);
+  //   // const id = myData.id;
+  //   console.log("This Is ID : " , id);
+  // }
 
   const getApiData = async () => {
     
     try {
-      const res = await axios.get("/blog");
+      const res = await axios.get("/blog/all");
       setMyData(res.data);
     } catch (error) {
       setIsError("error form content", error);
@@ -38,23 +43,24 @@ const MainInte = () => {
       </div>
       <h1 className="font-black text-2xl pt-4 px-2 py-7">Latest Blogs</h1>
       {myData.map((post) => {
-        const { id,authors, title, content, mainImage, domains,dateOfPublish, readTime } = post;
+        const { _id,authors, title, content, mainImage, domains,dateOfPublish, readTime } = post;
         let sents = content.split('.');
         let bag = sents.slice(0,3);
         let showContent = bag.join('.').concat('.');
         let date = new Date(dateOfPublish);
         let date1 = date.toDateString();
         let indexOfSpace = date1.indexOf(' ');
-        let dateShow = date1.substring(indexOfSpace + 1)
+        let dateShow = date1.substring(indexOfSpace + 1);
 
         return (
-          <div key={id} className="mb-4">
-            <div className="flex" onClick={handleClick}>
+          <div key={_id} className="mb-4">
+            <Link to= {`/events/blogs/${_id}`} >
+            <div className="flex">
               <span>
                 <img src={Profile} alt="" srcset="" />
               </span>
               <span className="px-3 pb-2 text-lg">{authors}</span>
-            </div>
+            </div></Link>
             <p className="font-black text-lg py-2 px-2">{title.toUpperCase()}</p>
             <div className="grid grid-cols-1 md:grid-cols-11">
               <div className="col-span-8">
@@ -88,7 +94,6 @@ const MainInte = () => {
           </div>
         );
       })}
-      {/* Hey */}
     </>
   );
 };

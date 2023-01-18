@@ -1,67 +1,124 @@
-import React from 'react'
-import Bottombar from './Bottombar'
-import Sidebar from './Sidebar'
-import Profile from "../../assets/Author_img.svg";
+import React, { useState, useEffect } from "react";
+import Bottombar from "./Bottombar";
+import Sidebar from "./Sidebar";
+import Profile from "../../assets/Profile_Blog.svg";
+import axios from "../../axios";
 import Dots from "../../assets/Three_dots.svg";
-import Rectangle from "../../assets/Rectangle 400.svg"
-import Rightsection2 from './Rightsection2';
+import linkedin from '../../assets/LinkedIn_black.svg';
+import insta from '../../assets/Insta_black.svg';
+import globe from '../../assets/Globe_black.svg';
+import Bookmark from '../../assets/Bookmark_black.svg';
+import mission from '../../assets/mission.svg'
+import { useParams } from "react-router-dom";
 
-const  SingleBlog = () => {
+const SingleBlog = (props) => {
+  const [myData, setMyData] = useState({});
+  const [loading, setLoading] = useState(true);
+  const [isError, setIsError] = useState({});
+  const { id } = useParams(); //Id From Url
+
+  const getApiData = async () => {
+    try {
+      const res = await axios.get(`/blog/?_id=${id}`);
+      setMyData(res.data);
+    } catch (error) {
+      setIsError("error form content", error);
+    }
+  };
+
+  let date = new Date(myData.dateOfPublish);
+  let date1 = date.toDateString();
+  let indexOfSpace = date1.indexOf(' ');
+  let dateShow = date1.substring(indexOfSpace + 1);
+
+  useEffect(() => {
+    setLoading(true);
+    getApiData();
+    setLoading(false);
+  }, []);
+
   return (
     <div>
       <div className="grid lg:grid-cols-12 grid-cols-1">
         <div className="bg-white lg:col-span-1 hidden lg:block">
           <Sidebar />
         </div>
-        <div className="bg-white lg:col-span-8 col-span-1 px-2 lg:px-28">
-        <div>
-      <hr />
-      <div>
-        <div className="font-[Montserrat]">
-        <div className="flex mt-16 font-[Montserrat]">
-          <span className="pl-2">
-            <img src={Profile} alt="" srcset="" />
-          </span>
-          <div className="px-5 pb-2  block">
-            <div className='text-lg font-bold'>Author_name</div>
-            <ul>
-              <li className='text-[12px] inline-flex'>5th November
-                  <div className='inline mt-2 mx-[26px]'><img src={Dots} alt="" srcset="" /></div>
-                  14 min read
-              </li>
-            </ul>
+
+        <div className="lg:col-span-11 col-span-1 px-16 py-10 bg-white">
+          <div className="grid grid-cols-10 pb-8">
+            <div className="col-span-1">
+              <img src={Profile} alt="" />
+            </div>
+            <div className="col-span-1 flex flex-col">
+              <p className="py-2 text-base font-bold">{myData?.authors}</p>
+              <p className="mt-auto">{dateShow}</p>
+            </div>
+            <div className="col-span-1 flex">
+              <img className="mt-auto" src={Dots} alt="" />
+            </div>
+            <div className="col-span-1 flex">
+              <p className="mt-auto">{myData?.readTime}</p>
+            </div>
+            <div className="col-span-3"></div>
+            <div className="col-span-3">
+            <div className="row flex lg:justify-end justify-center pt-8">
+                <div className="pr-3">
+                  <a href="https://www.linkedin.com/company/init-ai/mycompany/" target="_blank"><img src={linkedin} alt="" /></a>
+                </div>
+                <div className="px-3">
+                  <a href="https://www.instagram.com/djinit.ai/" target="_blank"><img src={insta} alt="" /></a> 
+                </div>
+                <div className="px-3">
+                  <a href=""><img src={globe} alt="" /></a> 
+                </div>
+                <div className="px-3">
+                  <a href=""><img src={Bookmark} alt="" /></a> 
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div className="row">
+            <p className="text-3xl font-bold">Activation Function in Neural Networks</p>
+          </div>
+          <div>
+            <img className="mx-auto my-5 rounded-md shadow-md border-2 max-w-lg border-gray-800" src={myData.mainImage} alt="" />
+          </div>
+          <div className="text-justify">
+            {myData.content}
           </div>
         </div>
-        <p className="font-bold text-[28px] py-2 mt-4">
-          Activation Function in Neural Networks
-        </p>
-        <div className="mx-auto md:mx-0 col-span-2">
-            <img className="md:ml-auto py-4" src={Rectangle} alt="" />
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-10 my-4">
-          <div className="col-span-10 text-[14px]">
-            <p>THE ARTICLE: lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum lorem ipsum lorem ips lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum lorem ipsum lorem ips lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum lorem ipsum lorem ips.</p>
 
-            <p>lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum lorem ipsum lorem ips lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum lorem ipsum lorem ips lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum lorem ipsum lorem ips lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum  lorem ipsum  lorem  ipsum lorem ipsumlorem ipsum lorem lorem.</p>
-          </div>
-        </div>
-
-        <hr />
-      </div>
-    </div>
-
-    </div>
-        </div>
-        <div className="bg-white hidden lg:block col-span-3">
-          <Rightsection2 />
-        </div>
-        <div className='lg:hidden'>
-          <Bottombar/>
+        <div className="lg:hidden">
+          <Bottombar />
         </div>
       </div>
     </div>
-    
-  )
-}
+  );
+};
 
-export default SingleBlog
+export default SingleBlog;
+
+// {myData.map((post) => {
+//   const { _id,authors, title, content, mainImage, domains,dateOfPublish, readTime } = post;
+//   let sents = content.split('.');
+//   let bag = sents.slice(0,3);
+//   let showContent = bag.join('.').concat('.');
+//   let date = new Date(dateOfPublish);
+//   let date1 = date.toDateString();
+//   let indexOfSpace = date1.indexOf(' ');
+//   let dateShow = date1.substring(indexOfSpace + 1);
+
+//   return (
+//     <div className="mb-4">
+//       <img src={Profile} alt="" />
+//       <p className="font-black text-lg py-2 px-2">{title.toUpperCase()}</p>
+//       <div className="grid grid-cols-1 md:grid-cols-11">
+//         <div className="col-span-8">
+//           <p className="px-2 pb-2">{showContent}</p>
+//         </div>
+        
+//       </div>
+//     </div>
+//   );
+// })}
