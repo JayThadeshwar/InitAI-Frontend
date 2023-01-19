@@ -49,7 +49,6 @@ const Contact = () => {
               <p className='text-base text-black py-1'>Ved Mistry - +91 9898989898</p>
 
               <div className="row flex lg:justify-start justify-center pt-8">
-                {/* <div className="col-span-1 lg:col-span-0"></div> */}
                 <div className="pr-4">
                   <a href="https://www.linkedin.com/company/init-ai/mycompany/" target="_blank"><img src={linkedin} alt="" /></a>
                 </div>

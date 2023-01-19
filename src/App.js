@@ -3,6 +3,8 @@ import Blogpage from "./components/Blogs/Blogpage";
 import { Routes ,Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Landing from "./components/Home/Landing";
+import SingleBlog from "./components/Blogs/SingleBlog";
+import ProjectsPage from "./components/Projects/ProjectsPage";
 
 function App() {
   return (
@@ -11,7 +13,9 @@ function App() {
     <Navbar/>
       <Routes>
         <Route path="/" element={ <Landing /> } />
-        <Route path="/events/blogs" element={ <Blogpage /> } />
+        <Route path="/events/blogs/all" element={ <Blogpage /> } />
+        <Route path="/projects" element={ <ProjectsPage /> } />
+        <Route path={`/events/blogs/:id`} element={ <SingleBlog /> } />
     </Routes>
     </div>
     </>
