@@ -14,7 +14,7 @@ const Rightsection = () => {
       </div>
 
       <div className="pl-10">
-        <p>NOVEMBER</p>
+        <p className="text-base font-bold">NOVEMBER</p>
         <div className="my-4">
           <div className="row flex">
             <img src={Profile} alt="" />
@@ -39,7 +39,7 @@ const Rightsection = () => {
           <p className="text-[15px] py-1">A proficient tester of ML models, checking for iverfitting and underfitting</p>
         </div>
 
-        <p>OCTOBER</p>
+        <p className="text-base font-bold">OCTOBER</p>
         <div className="my-4">
           <div className="row flex">
             <img src={Profile} alt="" />

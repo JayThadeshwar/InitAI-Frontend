@@ -19,7 +19,7 @@ const MultiCarousel = () => {
     const { className, onClick } = props;
     return (
       <div className={className} onClick={onClick}>
-        <img src={Add} alt="" />
+        <img src={Add} alt="" className="mr-4" />
       </div>
     );
   }
@@ -28,7 +28,7 @@ const MultiCarousel = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,    
+    slidesToShow: 4,    
     slidesToScroll: 1,
     // autoplay: true,
     // autoplaySpeed: 3000,
@@ -67,7 +67,8 @@ const MultiCarousel = () => {
         <span className="pt-6 font-semibold text-sm">Data Analytics</span>
         <span className="pt-6 font-semibold text-sm">Data Science</span>
         <span className="pt-6 font-semibold text-sm">Computer Vision</span>
-        <span className="pt-6 font-semibold text-sm">Natural Language Processing</span>
+        <span className="pt-6 font-semibold text-sm">Artificial Intelligence</span>
+        <span className="pt-6 font-semibold text-sm">Machine Learning</span>
       </Slider>
     </div>
   );
