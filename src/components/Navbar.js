@@ -35,11 +35,7 @@ const Navbar = () => {
               </div>
             </div>
           </Link>
-<<<<<<< HEAD
           <Link to="/ourteam" className="block lg:inline-block text-base lg:mt-0 text-black hover:bg-gray-200 p-2 hover:rounded-full mr-4 lg:mr-8">
-=======
-          <Link to = "/team" className="block lg:inline-block text-base lg:mt-0 text-black hover:bg-gray-200 p-2 hover:rounded-full mr-4 lg:mr-8">
->>>>>>> 43c5ebc45199fa6044042cd65af6840d97bccca6
             <span>Our Team</span>
           </Link>
           <Link to="/" className="block lg:inline-block text-base lg:mt-0 text-black hover:bg-gray-200 p-2 hover:rounded-full mr-4 lg:mr-8">
