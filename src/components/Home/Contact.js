@@ -1,10 +1,9 @@
 import React from 'react'
-import bg from '../assets/Pradhyuman 1.svg'
-import mark from '../assets/LocationMark.svg'
-import vector from '../assets/Vector.svg'
-import linkedin from '../assets/LinkedIn.svg'
-import insta from '../assets/Insta.svg'
-import globe from '../assets/Globe.svg'
+import mark from '../../assets/LocationMark.svg'
+import vector from '../../assets/Vector.svg'
+import linkedin from '../../assets/LinkedIn.svg'
+import insta from '../../assets/Insta.svg'
+import globe from '../../assets/Globe.svg'
 import LiveWave from './LiveWave'
 
 const Contact = () => {
@@ -50,7 +49,6 @@ const Contact = () => {
               <p className='text-base text-black py-1'>Ved Mistry - +91 9898989898</p>
 
               <div className="row flex lg:justify-start justify-center pt-8">
-                {/* <div className="col-span-1 lg:col-span-0"></div> */}
                 <div className="pr-4">
                   <a href="https://www.linkedin.com/company/init-ai/mycompany/" target="_blank"><img src={linkedin} alt="" /></a>
                 </div>
