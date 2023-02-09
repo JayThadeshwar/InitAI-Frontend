@@ -6,6 +6,7 @@ import Landing from "./components/Home/Landing";
 import Team from "./components/Team/Teampage";
 import SingleBlog from "./components/Blogs/SingleBlog";
 import ProjectsPage from "./components/Projects/ProjectsPage";
+import Footer from "./components/Home/Footer";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path={`/events/blogs/:id`} element={<SingleBlog />} />
           <Route path="/ourteam" element={<Team />}></Route>
         </Routes>
+        <Footer />
       </div>
     </>
 

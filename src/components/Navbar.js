@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <nav className="flex items-center justify-between flex-wrap bg-white border-b-[1.5px] border-black p-2 text-[16px]">
-      <Link href="/" className="mr-4 inline-flex items-center">
+      <Link to="/" className="mr-4 inline-flex items-center">
         <img src={logo}></img>
       </Link>
       <div className="block lg:hidden">
@@ -23,7 +23,7 @@ const Navbar = () => {
           <Link to="/projects" className="block lg:inline-block text-base lg:mt-0 text-black hover:bg-gray-200 p-2 hover:rounded-full mr-4 lg:mr-8">
             <span>Projects</span>
           </Link>
-          <Link to="/" id="dropdown" className="relative block lg:inline-block text-base lg:mt-0 text-black hover:bg-gray-200 p-2 hover:rounded-full mr-4 lg:mr-8" onClick={() => setOpen1(!open1)}>
+          {/* <Link to="/" id="dropdown" className="relative block lg:inline-block text-base lg:mt-0 text-black hover:bg-gray-200 p-2 hover:rounded-full mr-4 lg:mr-8" onClick={() => setOpen1(!open1)}>
             <div className='flex'>
               <span className=''>Events</span>
               <img className='w-6 h-6 ml-1' src={dropdown} alt="" />
@@ -34,6 +34,9 @@ const Navbar = () => {
                 <Link to="/events/blogs/all" className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200 p-2 hover:rounded-full" role="menuitem" tabindex="-1" id="menu-item-1">Blogs</Link>
               </div>
             </div>
+          </Link> */}
+          <Link to="/events/blogs/all" className="block lg:inline-block text-base lg:mt-0 text-black hover:bg-gray-200 p-2 hover:rounded-full mr-4 lg:mr-8">
+            <span>Blogs</span>
           </Link>
           <Link to="/ourteam" className="block lg:inline-block text-base lg:mt-0 text-black hover:bg-gray-200 p-2 hover:rounded-full mr-4 lg:mr-8">
             <span>Our Team</span>
@@ -45,12 +48,12 @@ const Navbar = () => {
             <span>About Us</span>
           </Link>
           <Link to="/" className="block lg:inline-block text-base lg:mt-0 text-black hover:bg-gray-200 p-2 hover:rounded-full mr-4 lg:mr-8">
-            <span>Alumini</span>
+            <span>Data 2 Knowledge</span>
           </Link>
         </div>
-        <div>
+        {/* <div>
           <Link href="/" className="inline-block text-sm py-4 px-12 leading-none border rounded-xl text-white bg-[#4051A3] border-black hover:bg-white hover:text-black mt-4 lg:mt-0 font-[Ubuntu] font-light">Sign In</Link>
-        </div>
+        </div> */}
       </div>
     </nav>
   )

@@ -130,7 +130,7 @@ const Teampage = () => {
 
           </div>
 
-          <div className='felx flex-cols sm:grid sm:grid-cols-12 sm:gap-4 mt-4 mx-3 mb-4'>
+          <div className='felx flex-cols sm:grid sm:grid-cols-12 sm:gap-4 mt-4 mx-3 pb-6'>
 
             <div className=' sm:col-start-3 sm:col-span-2  '>
               <img src={Profile} alt="" className='mx-auto sm:w-40  sm:ml-0' />
