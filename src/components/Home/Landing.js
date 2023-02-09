@@ -12,7 +12,7 @@ const Landing = () => {
   return (
     <div>
       <div className="">
-        <div className="bg-gradient-to-b from-[#edf5fe] to-[#cee3fc]">
+        <div className="bg-gradient-to-b font-['Montserrat'] from-[#edf5fe] to-[#cee3fc]">
           <Content />
           <OurMission />
           <OurVision />
@@ -21,7 +21,6 @@ const Landing = () => {
         <Blogs />
         <Roadmap />
         <Contact />
-        <Footer />
       </div>
     </div>
   );

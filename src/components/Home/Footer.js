@@ -5,6 +5,7 @@ import whiteinsta from '../../assets/InstaWhite.svg'
 import whiteglobe from '../../assets/GlobeWhite.svg'
 import sublist from '../../assets/sublist.svg'
 import line from '../../assets/Line.svg'
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -24,16 +25,16 @@ const Footer = () => {
             <div className="row grid grid-cols-2 mt-8 font-medium place-content-center">
                 <div className="col-span-1 mx-auto">
                     <ul className='list-none text-white'>
-                      <li className='flex mb-2'> <img src={sublist} alt="" /> <span className='pl-2'> Home</span> </li>
-                      <li className='flex mb-2'> <img src={sublist} alt="" /> <span className='pl-2'> Events</span> </li>
-                      <li className='flex mb-2'> <img src={sublist} alt="" /> <span className='pl-2'> Our Team</span> </li>
+                      <Link to="/"><li className='flex mb-2'> <img src={sublist} alt="" /> <span className='pl-2'> Home</span> </li></Link>
+                      <Link to="/"><li className='flex mb-2'> <img src={sublist} alt="" /> <span className='pl-2'> Events</span> </li></Link>
+                      <Link to="/ourteam"><li className='flex mb-2'> <img src={sublist} alt="" /> <span className='pl-2'> Our Team</span> </li></Link>
                     </ul>
                 </div>
                 <div className="col-span-1 mx-auto">
                     <ul className='list-none text-white'>
-                      <li className='flex mb-2'> <img src={sublist} alt="" /> <span className='pl-2'> Blogs</span> </li>
-                      <li className='flex mb-2'> <img src={sublist} alt="" /> <span className='pl-2'> Guide</span> </li>
-                      <li className='flex mb-2'> <img src={sublist} alt="" /> <span className='pl-2'> Alumni</span> </li>
+                      <Link to="/events/blogs/all"><li className='flex mb-2'> <img src={sublist} alt="" /> <span className='pl-2'> Blogs</span> </li></Link>
+                      <Link to="/"><li className='flex mb-2'> <img src={sublist} alt="" /> <span className='pl-2'> Guide</span> </li></Link>
+                      <Link to="/"><li className='flex mb-2'> <img src={sublist} alt="" /> <span className='pl-2'> Data 2 Knowledge</span> </li></Link>
                     </ul>
                 </div>
             </div>
@@ -44,24 +45,24 @@ const Footer = () => {
             <div className="flex font-medium">
               <img src={line} className="object-left lg:block sm:hidden" alt="" />
               <p className='text-center pt-8 px-auto'>
-              No. U, 15, Bhaktivedanta Swami Rd, opp. Cooper Hospital, Navpada, JVPD Scheme, Vile Parle, Mumbai, Maharashtra 400056
+              Dwarkadas J. Sanghvi College of Engineering <br /> No. U, 15, Bhaktivedanta Swami Rd, opp. Cooper Hospital, Navpada, JVPD Scheme, Vile Parle, Mumbai, Maharashtra 400056
               </p>
             </div>
             
         </div>
 
-        <div className="lg:col-span-3 lg:mt-1 mt-8">
+        <div className="lg:col-span-2 lg:mt-1 mt-8">
             <p className='text-white text-center font-semibold text-xl mb-4'>Follow Us</p>
             <div className="row flex justify-center py-3">
                 <div className="px-3">
-                    <a href="https://www.linkedin.com/company/init-ai/mycompany/" target="_blank"> <img src={whitelinkedin} alt="" /> </a>
+                    <Link to="https://www.linkedin.com/company/init-ai/mycompany/" target="_blank"> <img src={whitelinkedin} alt="" /> </Link>
                 </div>
                 <div className="px-3">
-                    <a href="https://www.instagram.com/djinit.ai/" target="_blank"></a><img src={whiteinsta} alt="" />
+                    <Link to="https://www.instagram.com/djinit.ai/" target="_blank"></Link><img src={whiteinsta} alt="" />
                 </div>
-                <div className="px-3">
-                    <a href="" target="_blank"><img src={whiteglobe} alt="" /></a>
-                </div>
+                {/* <div className="px-3">
+                    <Link to="/" target="_blank"><img src={whiteglobe} alt="" /></Link>
+                </div> */}
 
             </div>
         </div>
