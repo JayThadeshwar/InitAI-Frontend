@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Blogpage from "./components/Blogs/Blogpage";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Landing from "./components/Home/Landing";
+import Team from "./components/Team/Teampage";
+import SingleBlog from "./components/Blogs/SingleBlog";
+import ProjectsPage from "./components/Projects/ProjectsPage";
+import Footer from "./components/Home/Footer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+
+      <div className="App overflow-x-hidden">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/events/blogs/all" element={<Blogpage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path={`/events/blogs/:id`} element={<SingleBlog />} />
+          <Route path="/ourteam" element={<Team />}></Route>
+        </Routes>
+        <Footer />
+      </div>
+    </>
+
   );
 }
 
