@@ -8,6 +8,7 @@ import SingleBlog from "./components/Blogs/SingleBlog";
 import ProjectsPage from "./components/Projects/ProjectsPage";
 import Footer from "./components/Home/Footer";
 import Beginner from "./components/Beginner'sGuide/Beginner";
+import Data2Knowledge from "./components/datathon/Data2Knowledge";
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
           <Route path={`/events/blogs/:id`} element={<SingleBlog />} />
           <Route path="/ourteam" element={<Team />}></Route>
           <Route path="/beginner's-guide" element={<Beginner />}></Route>
-          <Route path="/events/data-2-knowledge" element={<Team />}></Route>
+          <Route path="/events/data-2-knowledge" element={<Data2Knowledge />}></Route>
         </Routes>
         <Footer />
       </div>

@@ -10,6 +10,8 @@ import globe from '../../assets/Globe_black.svg';
 import Bookmark from '../../assets/Bookmark_black.svg';
 import mission from '../../assets/mission.svg'
 import { useParams } from "react-router-dom";
+import HtmlParser from 'html-react-parser';
+import Content from "../Home/Content";
 
 const SingleBlog = (props) => {
   const [myData, setMyData] = useState({});
@@ -26,10 +28,13 @@ const SingleBlog = (props) => {
     }
   };
 
+
   let date = new Date(myData.dateOfPublish);
   let date1 = date.toDateString();
   let indexOfSpace = date1.indexOf(' ');
   let dateShow = date1.substring(indexOfSpace + 1);
+  // let blogdata = HtmlParser(myData.content)
+  // console.log(Content)
 
   useEffect(() => {
     setLoading(true);
@@ -79,13 +84,12 @@ const SingleBlog = (props) => {
 
           </div>
           <div className="row">
-            <p className="text-3xl font-bold">Activation Function in Neural Networks</p>
+            <p className="text-3xl font-bold">{myData.title}</p>
           </div>
           <div>
             <img className="mx-auto my-5 rounded-md shadow-md border-2 max-w-lg border-gray-800" src={myData.mainImage} alt="" />
           </div>
-          <div className="text-justify">
-            {myData.content}
+          <div dangerouslySetInnerHTML={{__html:myData.content}} className="text-justify">
           </div>
         </div>
 
