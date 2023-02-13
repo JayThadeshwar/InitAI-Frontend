@@ -6,8 +6,13 @@ import Bookmark from "../../assets/Bookmark.svg";
 import Round from "../../assets/Round.svg";
 import Dots from "../../assets/Three_dots.svg";
 import { Link, useNavigate , useParams } from 'react-router-dom';
+// import HtmlParser from 'html-react-parser';
+// import { HTMLReactParserOptions } from "html-react-parser";
+
+import HTMLReactParser from "html-react-parser";
 
 const MainInte = () => {
+  const parser = new DOMParser();
   const [myData, setMyData] = useState([]);
   const [isError, setIsError] = useState({});
   const navigate = useNavigate();
@@ -21,8 +26,7 @@ const MainInte = () => {
   //   console.log("This Is ID : " , id);
   // }
 
-  const getApiData = async () => {
-    
+  const getApiData = async () => {    
     try {
       const res = await axios.get("/blog/all");
       setMyData(res.data);
@@ -44,27 +48,39 @@ const MainInte = () => {
       <h1 className="font-black text-2xl pt-4 px-2 py-7">Latest Blogs</h1>
       {myData.map((post) => {
         const { _id,authors, title, content, mainImage, domains,dateOfPublish, readTime } = post;
-        let sents = content.split('.');
-        let bag = sents.slice(0,3);
-        let showContent = bag.join('.').concat('.');
+        // let sents = content.split('.');
+        // let bag = sents.slice(0,3);
+        // let showContent = bag.join('.').concat('.');
+        console.log(dateOfPublish)
         let date = new Date(dateOfPublish);
         let date1 = date.toDateString();
         let indexOfSpace = date1.indexOf(' ');
         let dateShow = date1.substring(indexOfSpace + 1);
 
+        // let date2 = new Date(dateOfPublish);
+        // let options = { year: 'numeric', month: 'long', day: 'numeric' };
+        // let formattedDate = date2.toLocaleDateString('en-US', options);
+        
+        const doc = parser.parseFromString(content, 'text/html');
+        const elements = Array.from(doc.body.children).slice(0, 2);
+        const firstThreeElements = elements.map(element => element.outerHTML).join('');
+        // let showcontent = HTMLReactParser(content)
+
         return (
-          <div key={_id} className="mb-4">
+          <div key={_id} className="mb-4 ">
             <Link to= {`/events/blogs/${_id}`} >
             <div className="flex">
               <span>
-                <img src={Profile} alt="" srcset="" />
+                <img src={Profile} alt="" />
               </span>
               <span className="px-3 pb-2 text-lg">{authors}</span>
             </div></Link>
             <p className="font-black text-lg py-2 px-2">{title.toUpperCase()}</p>
             <div className="grid grid-cols-1 md:grid-cols-11">
-              <div className="col-span-8">
-                <p className="px-2 pb-2">{showContent}</p>
+              <div className="col-span-8 mb-2">
+                {/* <p className="px-2 pb-2">{showContent}</p> */}
+                <div dangerouslySetInnerHTML={{__html:firstThreeElements}} />
+                {/* <div>{HTMLReactParser(content)}</div> */}
               </div>
               <div className="mx-auto md:mx-0 col-span-3">
                 <img
