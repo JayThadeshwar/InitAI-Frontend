@@ -20,6 +20,8 @@ function App() {
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path={`/events/blogs/:id`} element={<SingleBlog />} />
           <Route path="/ourteam" element={<Team />}></Route>
+          <Route path="/beginner's-guide" element={<Team />}></Route>
+          <Route path="/events/data-2-knowledge" element={<Team />}></Route>
         </Routes>
         <Footer />
       </div>
