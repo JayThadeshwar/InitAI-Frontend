@@ -51,7 +51,7 @@ const MainInte = () => {
         // let sents = content.split('.');
         // let bag = sents.slice(0,3);
         // let showContent = bag.join('.').concat('.');
-        console.log(dateOfPublish)
+        // console.log(dateOfPublish)
         let date = new Date(dateOfPublish);
         let date1 = date.toDateString();
         let indexOfSpace = date1.indexOf(' ');
@@ -64,7 +64,6 @@ const MainInte = () => {
         const doc = parser.parseFromString(content, 'text/html');
         const elements = Array.from(doc.body.children).slice(0, 2);
         const firstThreeElements = elements.map(element => element.outerHTML).join('');
-        // let showcontent = HTMLReactParser(content)
 
         return (
           <div key={_id} className="mb-4 ">

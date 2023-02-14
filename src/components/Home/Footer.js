@@ -26,15 +26,15 @@ const Footer = () => {
                 <div className="col-span-1 mx-auto">
                     <ul className='list-none text-white'>
                       <Link to="/"><li className='flex mb-2'> <img src={sublist} alt="" /> <span className='pl-2'> Home</span> </li></Link>
-                      <Link to="/"><li className='flex mb-2'> <img src={sublist} alt="" /> <span className='pl-2'> Events</span> </li></Link>
+                      <Link to="/events/data-2-knowledge"><li className='flex mb-2'> <img src={sublist} alt="" /> <span className='pl-2'> Events</span> </li></Link>
                       <Link to="/ourteam"><li className='flex mb-2'> <img src={sublist} alt="" /> <span className='pl-2'> Our Team</span> </li></Link>
                     </ul>
                 </div>
                 <div className="col-span-1 mx-auto">
                     <ul className='list-none text-white'>
                       <Link to="/events/blogs/all"><li className='flex mb-2'> <img src={sublist} alt="" /> <span className='pl-2'> Blogs</span> </li></Link>
-                      <Link to="/"><li className='flex mb-2'> <img src={sublist} alt="" /> <span className='pl-2'> Guide</span> </li></Link>
-                      <Link to="/"><li className='flex mb-2'> <img src={sublist} alt="" /> <span className='pl-2'> Data 2 Knowledge</span> </li></Link>
+                      <Link to="/beginner's-guide"><li className='flex mb-2'> <img src={sublist} alt="" /> <span className='pl-2'> Guide</span> </li></Link>
+                      <Link to="/events/data-2-knowledge"><li className='flex mb-2'> <img src={sublist} alt="" /> <span className='pl-2'> Data 2 Knowledge</span> </li></Link>
                     </ul>
                 </div>
             </div>

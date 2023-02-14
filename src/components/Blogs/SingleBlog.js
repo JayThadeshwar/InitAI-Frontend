@@ -8,10 +8,9 @@ import linkedin from '../../assets/LinkedIn_black.svg';
 import insta from '../../assets/Insta_black.svg';
 import globe from '../../assets/Globe_black.svg';
 import Bookmark from '../../assets/Bookmark_black.svg';
-import mission from '../../assets/mission.svg'
 import { useParams } from "react-router-dom";
 import HtmlParser from 'html-react-parser';
-import Content from "../Home/Content";
+import Html2ReactParser from "html-to-react/lib/parser";
 
 const SingleBlog = (props) => {
   const [myData, setMyData] = useState({});
@@ -34,8 +33,6 @@ const SingleBlog = (props) => {
   let indexOfSpace = date1.indexOf(' ');
   let dateShow = date1.substring(indexOfSpace + 1);
   // let blogdata = HtmlParser(myData.content)
-  // console.log(Content)
-
   useEffect(() => {
     setLoading(true);
     getApiData();
@@ -87,15 +84,16 @@ const SingleBlog = (props) => {
             <p className="text-3xl font-bold">{myData.title}</p>
           </div>
           <div>
-            <img className="mx-auto my-5 rounded-md shadow-md border-2 max-w-lg border-gray-800" src={myData.mainImage} alt="" />
+            <img className="mx-auto my-5 h-60 rounded-md shadow-md border-2 max-w-lg border-gray-800" src={myData.mainImage} alt="" />
           </div>
           <div dangerouslySetInnerHTML={{__html:myData.content}} className="text-justify">
-          </div>
+          {/* {data} */}
         </div>
 
         <div className="lg:hidden">
           <Bottombar />
         </div>
+      </div>
       </div>
     </div>
   );
