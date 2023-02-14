@@ -3,16 +3,18 @@ import Domain from './Domain'
 import FAQs from './FAQs'
 import Guidelines from './Guidelines'
 import Landing from './Landing'
+import Sponsor from './Sponsor'
 import Timeline from './Timeline'
-import Timer from './Timer'
+
 
 const Data2Knowledge = () => {
   return (
-    <div className='bg-black'>
+    <div className='bg-black text-["Montserrat"] md:pb-10'>
         <Landing/>
         <Domain/>
         <Timeline />
         <Guidelines/>
+        <Sponsor/>
         <FAQs/>
       
     </div>

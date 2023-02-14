@@ -11,7 +11,7 @@ import WhiteVertical from "../../assets/WhiteVertical.svg";
 
 const Landing = () => {
   return (
-    <div>
+    <div className=" font-['Montserrat']">
       <div className="row h-[334px] py-6">
         <img className="mx-auto w-60 md:w-80" src={D2k} alt="" />
         <img className="mx-auto h-8 md:h-[47px] my-2" src={D2Ktext} alt="" />
@@ -32,30 +32,30 @@ const Landing = () => {
       </div>
 
       <div className="row">
-        <img className="ml-auto mr-32" src={RedVertical} alt="" />
+        <img className="md:ml-auto md:mr-32 ml-auto md:h-full h-7" src={RedVertical} alt="" />
       </div>
       <div className="row">
-        <img className="ml-96" src={WhiteVertical} alt="" />
+        <img className="md:ml-96 mx-auto" src={WhiteVertical} alt="" />
       </div>
-      <div className="row mt-12">
+      <div className="row mt-4 md:mt-12">
         <div className="grid grid-cols-1 md:grid-cols-2">
           <div className="col-span-1">
-            <p className="text-4xl font-medium text-white px-24 mx-auto">
+            <p className="lg:text-3xl text-base font-medium text-justify text-white lg:px-24 px-4 mx-auto">
               Teams of coders race to turn streams of data into meaningful
               insights, it is a real thrill converting{" "}
-              <span className="text-3xl font-medium text-red-600">
+              <span className="lg:text-3xl text-base font-medium text-red-600">
                 data to knowledge!
               </span>
             </p>
 
-            <p className="text-4xl mt-12 font-medium text-white  px-24  mx-auto">
+            <p className="lg:text-3xl text-base mt-12 text-justify font-medium text-white lg:px-24 px-4 mx-auto">
               With over 100+ participants from numerous colleges, the datathon
               is a gathering where data science enthusiasts collaborate their
               codes to make industry-grade projects based on Data Science
               problems.
             </p>
             <div className="row">
-              <img className="ml-10 mt-12" src={RedVertical} alt="" />
+              <img className="md:ml-10 mt-12 md:h-full h-7" src={RedVertical} alt="" />
             </div>
           </div>
 
@@ -68,12 +68,12 @@ const Landing = () => {
         </div>
       </div>
 
-      <div className="row bg-gradient-to-b from-[#4B0004] to-[#D1000A] font-['Montserrat'] py-12">
-        <div className="text-5xl my-20 text-white text-center">Prizes</div>
-        <div className="grid grid-cols-3 gap-8">
-          <img className="" src={prize1} alt="" />
-          <img className="" src={prize2} alt="" />
-          <img className="" src={prize3} alt="" />
+      <div className="row bg-gradient-to-b from-[#4B0004] to-[#D1000A] font-['Montserrat'] py-6 md:py-12">
+        <div className="md:text-5xl text-2xl md:my-20 my-8 font-['Montserrat'] text-white text-center">Prizes</div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <img className="my-2 md:h-full h-40 mx-auto" src={prize1} alt="" />
+          <img className="my-2 md:h-full h-40 mx-auto" src={prize2} alt="" />
+          <img className="my-2 md:h-full h-40 mx-auto" src={prize3} alt="" />
         </div>
         <div className="text-white text-3xl mt-24 text-center">
           Guaranteed Internship & Interview opportunities

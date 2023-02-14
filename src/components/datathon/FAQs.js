@@ -1,54 +1,133 @@
-import React from 'react'
+import React from "react";
+import Faqicon from "../../assets/Faqicon.svg";
+import RedVertical from "../../assets/RedVertical.svg";
+import WhiteVertical from "../../assets/WhiteVertical.svg";
 
 const FAQs = () => {
   return (
-    <div className='mx-auto'>
-      
-<div id="accordion-collapse" data-accordion="collapse">
-  <h2 id="accordion-collapse-heading-1">
-    <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
-      <span>What is a Hackathon?</span>
-      <svg data-accordion-icon class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-    </button>
-  </h2>
-  <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
-    <div class="p-5 font-light border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-      <p class="mb-2 text-gray-500 dark:text-gray-400">A hackathon is an event where people engage in rapid and collaborative engineering over a relatively short period of time such as 24 or 48 hours.</p>
-    </div>
-  </div>
-  <h2 id="accordion-collapse-heading-2">
-    <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
-      <span>Is there a Figma file available?</span>
-      <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-    </button>
-  </h2>
-  <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
-    <div class="p-5 font-light border border-b-0 border-gray-200 dark:border-gray-700">
-      <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
-      <p class="text-gray-500 dark:text-gray-400">Check out the <a href="https://flowbite.com/figma/" class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
-    </div>
-  </div>
-  <h2 id="accordion-collapse-heading-3">
-    <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-collapse-body-3" aria-expanded="false" aria-controls="accordion-collapse-body-3">
-      <span>What are the differences between Flowbite and Tailwind UI?</span>
-      <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-    </button>
-  </h2>
-  <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
-    <div class="p-5 font-light border border-t-0 border-gray-200 dark:border-gray-700">
-      <p class="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
-      <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
-      <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
-      <ul class="pl-5 text-gray-500 list-disc dark:text-gray-400">
-        <li><a href="https://flowbite.com/pro/" class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
-        <li><a href="https://tailwindui.com/" rel="nofollow" class="text-blue-600 dark:text-blue-500 hover:underline">Tailwind UI</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
+    <div className="mx-auto bg-black font-['Montserrat'] md:mt-20 mt-10">
+      <div className="row">
+        <img className="md:ml-auto md:mr-32 ml-auto md:h-full h-7" src={RedVertical} alt="" />
+      </div>
+      <div className="text-white text-center mb-2 md:mb-20 md:text-5xl text-2xl">
+        Frequently asked Questions
+      </div>
+      <div className="text-white text-center mb-2 md:mb-20 md:text-2xl text-base">
+        Can't find the answers to what you are looking for?{" "}
+        <span className="text-[#FF8A50] ">Reach out to our Team</span>
+      </div>
+
+      <div class="row md:mx-auto px-2 md:px-32">
+        <div class="p-8 rounded overflow-hidden">
+          <hr className="my-3" />
+          <div class="group outline-none accordion-section" tabindex="1">
+            <div class="group bg-black flex justify-between px-4 py-3 items-center text-white transition ease duration-500 cursor-pointer pr-10 relative">
+              <div class="group-focus:text-white md:text-xl text-base transition ease duration-500">
+                What is a Hackathon?
+              </div>
+              <div class="h-8 w-8 rounded-full items-center inline-flex justify-center transform transition ease duration-500 group-focus:text-white group-focus:-rotate-180 absolute top-0 right-0 mb-auto ml-auto mt-2 mr-2">
+                <img src={Faqicon} alt="" />
+              </div>
+            </div>
+            <div class="group-focus:max-h-screen max-h-0 bg-gray-800 px-4 overflow-hidden ease duration-500">
+              <p class="p-2 text-[#ffffff99] text-justify md:text-lg text-base">
+                A hackathon is an event where people engage in rapid and
+                collaborative engineering over a relatively short period of time
+                such as 24 or 48 hours.
+              </p>
+            </div>
+          </div>
+          <hr className="my-3" />
+          <div class="group outline-none accordion-section" tabindex="2">
+            <div class="group bg-black flex justify-between px-4 py-3 items-center text-white transition ease duration-500 cursor-pointer pr-10 relative">
+              <div class="group-focus:text-white md:text-xl text-base transition ease duration-500">
+                What should be my preparation for a hackathon?
+              </div>
+              <div class="h-8 w-8 rounded-full items-center inline-flex justify-center transform transition ease duration-500 group-focus:text-white group-focus:-rotate-180 absolute top-0 right-0 mb-auto ml-auto mt-2 mr-2">
+                <img src={Faqicon} alt="" />
+              </div>
+            </div>
+            <div class="group-focus:max-h-screen max-h-0 bg-gray-800 px-4 overflow-hidden ease duration-500">
+              <p class="p-2 text-[#ffffff99] text-justify md:text-lg text-base">
+                Familiarize yourself with the theme or problem statement of the
+                hackathon and any rules or guidelines provided by the
+                organizers. Form a team or find potential teammates to work
+                with. 
+              </p>
+            </div>
+          </div>
+          <hr className="my-3" />
+          <div class="group outline-none accordion-section" tabindex="3">
+            <div class="group bg-black flex justify-between px-4 py-3 items-center text-white transition ease duration-500 cursor-pointer pr-10 relative">
+              <div class="group-focus:text-white md:text-xl text-base transition ease duration-500">
+                What will be provided during the hackathon?
+              </div>
+              <div class="h-8 w-8 rounded-full items-center inline-flex justify-center transform transition ease duration-500 group-focus:text-white group-focus:-rotate-180 absolute top-0 right-0 mb-auto ml-auto mt-2 mr-2">
+                <img src={Faqicon} alt="" />
+              </div>
+            </div>
+            <div class="group-focus:max-h-screen max-h-0 bg-gray-800 px-4 overflow-hidden ease duration-500">
+              <p class="p-2 text-[#ffffff99] text-justify md:text-lg text-base">
+                A workspace: This could be a physical location or a virtual
+                platform where you can work on your project. Internet access:
+                You'll need internet access to research, collaborate, and
+                potentially showcase your project.
+              </p>
+            </div>
+          </div>
+          <hr className="my-3" />
+          <div class="group outline-none accordion-section" tabindex="4">
+            <div class="group bg-black flex justify-between px-4 py-3 items-center text-white transition ease duration-500 cursor-pointer pr-10 relative">
+              <div class="group-focus:text-white md:text-xl text-base transition ease duration-500">
+                How do I form a team?
+              </div>
+              <div class="h-8 w-8 rounded-full items-center inline-flex justify-center transform transition ease duration-500 group-focus:text-white group-focus:-rotate-180 absolute top-0 right-0 mb-auto ml-auto mt-2 mr-2">
+                <img src={Faqicon} alt="" />
+              </div>
+            </div>
+            <div class="group-focus:max-h-screen max-h-0 bg-gray-800 px-4 overflow-hidden ease duration-500">
+              <p class="p-2 text-[#ffffff99] text-justify md:text-lg text-base">
+                Each team would comprise of 2-4 members including the team
+                leader. All team members should be from same college; no
+                inter-college teams are allowed. However, members from different
+                branches of the same college/ institute can form a team.
+              </p>
+            </div>
+          </div>
+          <hr className="my-3" />
+          <div class="group outline-none accordion-section" tabindex="5">
+            <div class="group bg-black flex justify-between px-4 py-3 items-center text-white transition ease duration-500 cursor-pointer pr-10 relative">
+              <div class="group-focus:text-white md:text-xl text-base transition ease duration-500">
+                What should I bring?
+              </div>
+              <div class="h-8 w-8 rounded-full items-center inline-flex justify-center transform transition ease duration-500 group-focus:text-white group-focus:-rotate-180 absolute top-0 right-0 mb-auto ml-auto mt-2 mr-2">
+                <img src={Faqicon} alt="" />
+              </div>
+            </div>
+            <div class="group-focus:max-h-screen max-h-0 bg-gray-800 px-4 overflow-hidden ease duration-500">
+              <p class="p-2 text-[#ffffff99] text-justify md:text-lg text-base">
+                Your laptop: Make sure your laptop is fully charged and that you
+                bring the charger. Any necessary peripherals: This could include
+                a mouse, keyboard, or other accessories that you prefer to use
+                while coding. Any necessary software: Make sure you have any
+                necessary software installed before the hackathon.
+              </p>
+            </div>
+          </div>
+          <hr className="my-3" />
+        </div>
+      </div>
+
+      <div className="row">
+        <img className="md:mr-96 mx-auto" src={WhiteVertical} alt="" />
+      </div>
+      <div className="row">
+          <img className="md:ml-10 mt-2 md:mt-12 md:h-full h-7" src={RedVertical} alt="" />
+        </div>
+
 
     </div>
-  )
-}
+  );
+};
 
-export default FAQs
+export default FAQs;

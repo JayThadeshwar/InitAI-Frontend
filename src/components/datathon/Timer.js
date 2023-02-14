@@ -22,7 +22,7 @@ const Timer = () => {
   }, [parsedDeadline]);
 
   return (
-    <div className="bg-gradient-to-r from-orange-600 via-red-500 to-yellow-400 p-1">
+    <div className="font-['Montserrat'] bg-gradient-to-r from-orange-600 via-red-500 to-yellow-400 p-1">
         <div className="grid grid-cols-4 bg-black md:p-3">
       {Object.entries({
         Days: time / DAY,
