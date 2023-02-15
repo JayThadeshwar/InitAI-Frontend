@@ -115,13 +115,10 @@ const Roadmap = () => {
         <div className="col-span-5">
           <div className="row">
             <div className="lg:pl-0 pl-4">
-            <p className="text-3xl">18TH OCT</p>
-            <p className="text-[#029090] mt-5 text-4xl">LECTURE SERIES</p>
-            <p className="pe-2 mr-4 text-sm mt-2 ">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-              perspiciatis tempore ad laboriosam dolorem quidem velit possimus,
-              quasi consequuntur rem alias aperiam, minus officiis sit accusamus
-              porro, dignissimos libero nulla?
+            <p className="text-3xl">INTRODUCTION TO PYTHON</p>
+            <p className="text-[#029090] mt-5 text-4xl">INTRO,OPPS AND PYTHON LIBRARIES</p>
+            <p className="pe-2 mr-4 text-sm text-justify mt-2">
+            Python is a popular programming language that supports object-oriented programming (OOP) paradigm. OOP is a programming approach that emphasizes the use of objects, which are instances of classes that encapsulate data and behaviors. Libraries such as NumPy, Pandas, Matplotlib and Seaborn.
             </p>
             </div>
             
@@ -141,13 +138,11 @@ const Roadmap = () => {
       <div className="row grid lg:grid-cols-11 lg:mt-0 mt-8 lg:pb-0 pb-8">
       <div className="col-span-5">
           <div className="row">
-            <p className="text-3xl text-right lg:pr-20 mr-4">15TH OCT</p>
-            <p className="text-[#029090] mt-5 text-4xl text-right lg:pr-20 mr-4">BLOG-A-THON</p>
-            <p className="pl-2 ml-4 text-right text-sm mt-4 lg:pr-20 mr-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-              perspiciatis tempore ad laboriosam dolorem quidem velit possimus,
-              quasi consequuntur rem alias aperiam, minus officiis sit accusamus
-              porro, dignissimos libero nulla?
+            <p className="text-3xl text-right lg:pr-20 mr-4">DATA ANALYSIS I & II </p>
+            <p className="text-[#029090] mt-5 text-4xl text-right lg:pr-20 mr-4">Excel and Tableau</p>
+            <p className="pl-2 ml-4 text-justify text-base mt-4 lg:pr-20 mr-4">
+            Data analysis is the process of examining and interpreting data to extract insights and draw conclusions. It involves collecting, cleaning, organizing, and transforming data to make it useful for decision-making.
+            <p className=" text-justify text-base mt-4 ">Excel and Tableau are software tools that can be used for data analysis. Excel is a spreadsheet program that allows users to manipulate and analyze data using formulas and functions. It is widely used for financial analysis, budgeting, and forecasting. </p>
             </p>
           </div>
         </div>
@@ -176,24 +171,3 @@ const Roadmap = () => {
 };
 
 export default Roadmap;
-{/* <div className="flex w-[80%] justify-end pl-auto mt-8">
-            <div className="justify-end px-auto align-bottom relative border-2 border-black" >
-            </div>
-            <div className="flex">
-              <img className="" src={small_circle} alt="" />
-              <img className="" src={small_circle} alt="" />
-              </div>
-            
-             </img> 
-              
-              
-              
-            </div> */}
-
-{/* <div className="flex w-fit justify-end pl-auto mt-8">
-            <img className="justify-end px-auto align-bottom relative" src={short_horizontal} alt="" />
-            <div className="flex absolute justify-items-start">
-              <img className="" src={small_circle} alt="" />
-              <img className="" src={small_circle} alt="" />
-              </div>
- */}
