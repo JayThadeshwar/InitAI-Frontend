@@ -11,6 +11,7 @@ import Beginner from "./components/Beginner'sGuide/Beginner";
 import Data2Knowledge from "./components/datathon/Data2Knowledge";
 import TeamInte from "./components/Team/TeamInte";
 import AboutUs from "./components/Home/AboutUs";
+import Main from "./components/Projects/Main";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/ourteam" element={<TeamInte />}></Route>
           <Route path="/beginner's-guide" element={<Beginner />}></Route>
           <Route path="/events/data-2-knowledge" element={<Data2Knowledge />}></Route>
+          <Route path="/single-project" element={<Main />}></Route>
         </Routes>
         <Footer />
       </div>

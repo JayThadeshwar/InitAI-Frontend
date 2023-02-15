@@ -6,25 +6,12 @@ import Bookmark from "../../assets/Bookmark.svg";
 import Round from "../../assets/Round.svg";
 import Dots from "../../assets/Three_dots.svg";
 import { Link, useNavigate , useParams } from 'react-router-dom';
-// import HtmlParser from 'html-react-parser';
-// import { HTMLReactParserOptions } from "html-react-parser";
-
-import HTMLReactParser from "html-react-parser";
 
 const MainInte = () => {
   const parser = new DOMParser();
   const [myData, setMyData] = useState([]);
   const [isError, setIsError] = useState({});
   const navigate = useNavigate();
-  // const { id,authors, title, content, mainImage, domains,dateOfPublish, readTime } = post; 
-  // const { id } = useParams();
-  // const { id } = context;
-
-  // const handleClick = () => {
-  //   // navigate(`/${blog?.id}`);
-  //   // const id = myData.id;
-  //   console.log("This Is ID : " , id);
-  // }
 
   const getApiData = async () => {    
     try {
@@ -48,10 +35,6 @@ const MainInte = () => {
       <h1 className="font-black text-2xl pt-4 px-2 py-7">Latest Blogs</h1>
       {myData.map((post) => {
         const { _id,authors, title, content, mainImage, domains,dateOfPublish, readTime } = post;
-        // let sents = content.split('.');
-        // let bag = sents.slice(0,3);
-        // let showContent = bag.join('.').concat('.');
-        // console.log(dateOfPublish)
         let date = new Date(dateOfPublish);
         let date1 = date.toDateString();
         let indexOfSpace = date1.indexOf(' ');
