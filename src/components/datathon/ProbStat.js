@@ -5,30 +5,29 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 
-export default function PSCard({pdfObj}) {
+export default function PSCard({ pdfObj, title, content, img }) {
   return (
-    <Card sx={{ maxWidth: 300 }}>
+    <Card sx={{ maxWidth: 300, borderRadius: '3%'}}>
       <CardActionArea>
         <CardMedia
           component="img"
           height="140"
-          src="https://miro.medium.com/max/540/1*J_EXEmUkOcg-rgzJudUhZQ.png"       
-          alt="PS1"
+          src={img}
+          alt="PS image"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            Lizard
+            {title}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            {content}
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions style={{justifyContent: "center"}}>
-        <a href = {pdfObj}>
+      <CardActions style={{ justifyContent: "center" }}>
+        <a href={pdfObj}>
           <Button size="small" variant="outlined">
-            Download
+            Download PDF
           </Button>
         </a>
       </CardActions>
