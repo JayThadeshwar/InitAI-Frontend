@@ -12,7 +12,7 @@ import WhiteVertical from "../../assets/WhiteVertical.svg";
 const Landing = () => {
   return (
     <div className=" font-['Montserrat']">
-      <div className="row h-[334px] py-6">
+      <div className="row h-[270px] py-6">
         <img className="mx-auto w-60 md:w-80" src={D2k} alt="" />
         <img className="mx-auto h-8 md:h-[47px] my-2" src={D2Ktext} alt="" />
       </div>
