@@ -6,13 +6,13 @@ import vertical from "../../assets/BeginnerVerticalLine.svg";
 
 const Roadmap = () => {
     return (
-        <div className=' mb-10 md:mb-40'>
+        <div className=' pb-10 md:mb-40'>
             <div className='lg:grid lg:grid-cols-3 mb-28 ml-4 lg:ml-0'>
-                <div className='col-span-2 text-3xl m-auto font-bold'>
+                <div className='col-span-2  text-2xl md:text-4xl m-auto font-bold'>
                     Here is a beginner's guide to AL and ML:
                 </div>
                 <div>
-                    <img className='mx-auto mt-10 lg:mt-0' src={BeginnerHead} alt="" />
+                    <img className='mx-auto pt-10 lg:mt-0' src={BeginnerHead} alt="" />
                 </div>
             </div>
 
@@ -34,7 +34,7 @@ const Roadmap = () => {
                         <img className='ml-14' src={vertical} alt="" />
                     </div>
                 </div>
-                <img className="mx-auto" src={box} alt="" />
+                <img className="hidden md:block mx-auto" src={box} alt="" />
             </div>
 
             <div>
