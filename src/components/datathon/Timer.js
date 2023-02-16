@@ -3,7 +3,8 @@ import { useState, useEffect, useMemo } from "react";
 
 const Timer = () => {
   // const deadline = "February, 16, 2023";
-  const parsedDeadline = 1676516400000;
+  // const parsedDeadline = 1676516400000;
+  const parsedDeadline = 1676540700000;
   const [time, setTime] = React.useState(parsedDeadline - Date.now());
 
 
@@ -24,6 +25,7 @@ const Timer = () => {
     <div className="font-['Montserrat'] bg-gradient-to-r from-orange-600 via-red-500 to-yellow-400 p-1">
       {
         time / DAY > 0 ?
+        <>
           <div className="grid grid-cols-4 bg-black md:p-3">
             {
               Object.entries({
@@ -38,9 +40,14 @@ const Timer = () => {
                     <span className="md:px-14 px-1 text-base md:text-xl text-white">{label}</span>
                   </div>
                 </div>
+                
               ))
             }
-          </div>
+            </div>
+            <div className="font-['Montserrat'] text-center text-white font-medium text-2xl">Submission Timer</div>
+          
+          </>
+          
           : <div className="text-xl text-white text-center"> Inspect the data, and it will confess anything. </div>
       }
     </div>
