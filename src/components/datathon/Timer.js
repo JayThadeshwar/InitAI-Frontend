@@ -4,7 +4,7 @@ import { useState, useEffect, useMemo } from "react";
 const Timer = () => {
   // const deadline = "February, 16, 2023";
   // const parsedDeadline = 1676516400000;
-  const parsedDeadline = 1676540700000;
+  const parsedDeadline = 1676543400000;
   const [time, setTime] = React.useState(parsedDeadline - Date.now());
 
 
@@ -44,7 +44,7 @@ const Timer = () => {
               ))
             }
             </div>
-            <div className="font-['Montserrat'] text-center text-white font-medium text-2xl">Submission Timer</div>
+            <div className="font-['Montserrat'] my-1 text-center text-white font-medium text-2xl">Shorlisted Teams Will Be Announced by</div>
           
           </>
           
