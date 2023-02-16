@@ -14,7 +14,7 @@ const ProblemStatements = () => {
                     <img className="md:ml-auto md:mr-32 ml-auto md:h-full h-7" src={RedVertical} alt="" />
                 </div>
                 <div className="text-white text-center mb-2 md:mb-20 md:text-5xl text-2xl">Problem Statement</div>
-                <div style={{color: 'red', textAlign: 'center'}}>Will be released soon...</div>
+                {/* <div style={{color: 'red', textAlign: 'center'}}>Will be released soon...</div> */}
                 <div className="row flex justify-center">                
                     <div className="grid grid-cols-1 md:grid-cols-3 md:mx-40 md:gap-12 text-center">                        
                         <div className="col-span-1 my-2 rounded-lg mx-2">
