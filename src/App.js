@@ -7,6 +7,7 @@ import Team from "./components/Team/Teampage";
 import SingleBlog from "./components/Blogs/SingleBlog";
 import ProjectsPage from "./components/Projects/ProjectsPage";
 import Footer from "./components/Home/Footer";
+import About from "./components/About Us/About";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path={`/events/blogs/:id`} element={<SingleBlog />} />
           <Route path="/ourteam" element={<Team />}></Route>
+          <Route path="/about" element={<About />}></Route>
         </Routes>
         <Footer />
       </div>
